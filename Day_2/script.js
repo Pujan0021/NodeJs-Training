@@ -31,5 +31,5 @@ function playGame() {
     console.log(points);
 }
 console.log(points)
-playGame()
-playGame()
+playGame();
+playGame();
