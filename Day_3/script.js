@@ -45,15 +45,28 @@
 // }, 50);
 
 //callBack in js
-const greet = (name, callback) => {
-    console.log("Hello " + name);
-    callback();
+// const greet = (name, callback) => {
+//     console.log("Hello " + name);
+//     callback();
+// }
+// const askName = () => {
+//     console.log("What is Your")
+// }
+
+// greet("Pujan", askName);
+
+
+
+//Promise
+const data = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        console.log("Welcome")
+        resolve(200);
+    }, 20)
+});
+async function greetUser() {
+    console.log("Hello");
+    await data;
 }
-const askName = () => {
-    console.log("What is Your")
-}
-
-greet("Pujan", askName);
-
-
+greetUser()
 
