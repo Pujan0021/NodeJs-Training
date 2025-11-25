@@ -58,15 +58,33 @@
 
 
 //Promise
-const data = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        console.log("Welcome")
-        resolve(200);
-    }, 20)
-});
-async function greetUser() {
-    console.log("Hello");
-    await data;
-}
-greetUser()
+// const data = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         console.log("Welcome")
+//         resolve(200);
+//     }, 20)
+// });
+// async function greetUser() {
+//     console.log("Hello");
+//     await data;
+// }
+// greetUser()
+
+
+// function divide(a, b) {
+//     try {
+//         if (b === 0) throw "Cannot divide by zero";
+//         let result = a / b;
+//         console.log(result);
+//     } catch (err) {
+//         console.log("Error Occured", err);
+//     } finally {
+//         console.log("Done")
+//     }
+// }
+// divide(20, 10);
+// divide(20, 0)
+
+
+
 
