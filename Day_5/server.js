@@ -1,10 +1,30 @@
+// GET Request with Query Params and URL Params
 const express = require("express");
-require("dotenv").config();
 const app = express();
-app.get("/", (req, res) => {
-    res.send("Hello from Server");
-})
-app.listen(process.env.PORT || 5000, () => {
-    console.log("Server running .......................")
-})
+const port = 5000;
 
+// Simple GET
+app.get("/info", (req, res) => {
+    res.send("Server is running.");
+});
+
+// GET with Query Params
+app.get("/user", (req, res) => {
+    const { name, age } = req.query;
+    res.send(
+        `Query Received\nName: ${name}\nAge: ${age}`
+    );
+});
+
+// GET with URL Params
+app.get("/product/:id", (req, res) => {
+    const productId = req.params.id;
+    res.send(
+        `Product ID Received: ${productId}`
+    );
+});
+
+// Start server
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});
