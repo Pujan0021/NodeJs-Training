@@ -44,7 +44,7 @@ setTimeout(() => {
     console.log("D");
 }, 50);
 
-callBack in js
+//callBack in js
 const greet = (name, callback) => {
     console.log("Hello " + name);
     callback();
