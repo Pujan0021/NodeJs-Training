@@ -1,19 +1,16 @@
 let express = require("express");
-let port = "5000";
+let port = 5000;
 let app = express();
-app.use((req, res, next) => {
-    console.log("-----MiddleWare---------");
-    next();
-})
-// Custom MiddleWare
-const middleWare = (req, res, next) => {
-    console.log("This is a custom middleware");
-    next();
-}
-app.use(middleWare);
-app.get("/", (req, res) => {
-    res.send("Hello From server...")
+
+app.get("/", (req, res, next) => {
+    const error = new Error("Error Occured");
+    next(error);
+
 });
+app.use((err, req, res, next) => {
+    console.log("Error:", err.message);
+    res.send("Error Occured!");
+})
 app.listen(port, () => {
     console.log("....Server Started....")
 });
