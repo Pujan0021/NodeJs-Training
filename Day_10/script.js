@@ -15,7 +15,7 @@ const writeFile = async () => {
 }
 writeFile()
 const appendFile = async () => {
-    await fs.promises.appendFile(filepath, "\nFrom Nepathya, College", "utf-8");
+    await fs.promises.appendFile(filepath, "\nNepathya College is a private institution in Manigram, Tilottama-5, Rupandehi, Nepal, affiliated with Tribhuvan University. It is best known for offering IT-focused programs such as BSc. CSIT and BCA, making it one of the region’s premier destinations for computer and technology education", "utf-8");
     console.log("File Appended Finished");
 }
 appendFile();
